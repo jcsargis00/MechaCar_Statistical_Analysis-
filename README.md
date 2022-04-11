@@ -33,26 +33,20 @@
 
 ## T-Tests on Suspension Coils
 ### interpretation and findings for the t-test results
-# t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI
-# all lots
+#### t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI
+#### all lots
 t.test(Suspension_Coil$PSI,mu=mean(Suspension_Coil$PSI))
 #
 ![t-testall](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestall.PNG)
 #
-# lot 1
-t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot1"),mu=mean(Suspension_Coil$PSI))
-#
-![t-test1](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttest1.PNG)
-#
-# lot 2
+#### lot 2
 t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot2"),mu=mean(Suspension_Coil$PSI))
 #
 ![t-test2](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttest2.PNG)
 #
-# lot 3
+#### lot 3
 t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot3"),mu=mean(Suspension_Coil$PSI))
 #
-
 ![t-test3](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttest3.PNG)
 
 
