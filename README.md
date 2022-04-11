@@ -58,32 +58,48 @@ Statistics for each of the 3 lots are shown below.  The mean and median are clos
 #
 * The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? 
 The variance for all of the lots is 62.29356, which is < 100.  However, the variance for lot 3 is 170.2861224, which is >100.
-Lots 1 and 2 meet the design specifications as individual lots, while lot 3 on it's own does not, but as part of all 3 lots, it does.
+Lots 1 (variance 0.9795918)and 2 (variance 7.4693878) meet the design specifications as individual lots, while lot 3 on it's own does not, 
+but as part of all 3 lots, it does.
 #
 
 ## T-Tests on Suspension Coils
 ### interpretation and findings for the t-test results
 #### t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI
 #### all lots
+#
+All lots
+p-value = 06028   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for all of the lots as a dataset.
+#
 t.test(Suspension_Coil$PSI,mu=mean(Suspension_Coil$PSI))
 #
 ![t-testall](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestall.PNG)
 #
 #### lot 1
 #
+Lot 1
+p-value = 1   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for lot 1.
+#
 t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot1"),mu=mean(Suspension_Coil$PSI))
 #
 ![t-test1](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestlot1.PNG)
 #### lot 2
+#
+p-value = .6072   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for lot 2.
+#
 t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot2"),mu=mean(Suspension_Coil$PSI))
 #
 ![t-test2](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestlot2.PNG)
 #
 #### lot 3
+#
+p-value = .04168   Since the p-value <.05 the common significance level, there is enough evidence to reject the null hypothesis for lot 3.
+#
 t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot3"),mu=mean(Suspension_Coil$PSI))
 #
 ![t-test3](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestlot3.PNG)
-
+#
+### Summary
+For each individual lot, Lot 1 had a p-value of 1 and Lot 2 had a p-value of 0.60, both statistically similar which means we cannot reject the null hypothesis. For Lot 3, the sample mean is 1496.14 with a p-Value of 0.04, lower than the significance level of 0.05 which indicates that the sample mean and the presumed population mean are not statistically different.
 
 
 ## Study Design: Statistical Study Comparing MechaCar vs. Competition
