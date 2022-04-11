@@ -1,29 +1,30 @@
 # MechaCar_Statistical_Analysis
 ## Linear Regression to Predict MPG
-### Import the MechaCar_mpg.csv file and read into a dataframe
+#### Import the MechaCar_mpg.csv file and read into a dataframe
 #
 ![dataframe](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/importdataframe.PNG)
+
 #
-## Summary
+![MechaCar](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/summarymecha.PNG)
+#
+### Summary
 #
 * Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 * Is the slope of the linear model considered to be zero? Why or why not?
 * Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-#
-![MechaCar](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/summarymecha.PNG)
+
 #
 ## Summary Statistics on Suspension Coils
 #
-
-### Import the Suspension_Coil.csv file and read into a dataframe
+#### Import the Suspension_Coil.csv file and read into a dataframe
 #
 ![Suspension](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/suspension.PNG)
 #
-## Total Summary
+#### Total Summary
 #
 ![total summary](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/totalsummary.PNG)
 #
-## Lot Summary
+#### Lot Summary
 #
 ![lot summary](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/lotsummary.PNG)
 #
