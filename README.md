@@ -18,7 +18,7 @@ Coefficients:
 * vehicle length: 0 < .05, statistically significant, non-random amount of variance
 * vehicle weight: .08 > .05 not statistically significant, random amount of variance
 * spoiler angle: .31 > .05 not statistically significant, random amount of variance
-* ground clearance: 3.546 > .05 statistically significant, non-random amount of variance
+* ground clearance: 0 < .05 statistically significant, non-random amount of variance
 * AWD: .19>=.05 not statistically significant, random amount of variance
 #
 Significant: vehicle length, and ground clearance represent non-random amounts of variance with respect to the mpg values
@@ -34,7 +34,7 @@ Slopes:
 * AWD -3.411
 
 
-* Does this linear model predict mpg of MechaCar prototypes effectively? 
+### Does this linear model predict mpg of MechaCar prototypes effectively? 
 R-squared is 0.7149, adjusted R-squared is 0.6825.  This linear model has a strong correlation with the dataset
 and should predict mpg of MechaCar prototypes effectively, provided there are not other variables outside of the
 dataset contributing to the variaton of the mpg.  The R-squared variable indicates about 71% of all mpg predictions
@@ -59,7 +59,7 @@ Statistics for each of the 3 lots are shown below.  The mean and median are clos
 #
 * The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? 
 The variance for all of the lots is 62.29356, which is < 100.  However, the variance for lot 3 is 170.2861224, which is >100.
-Lots 1 (variance 0.9795918)and 2 (variance 7.4693878) meet the design specifications as individual lots, while lot 3 on it's own does not, 
+Lots 1 (variance 0.9795918) and 2 (variance 7.4693878) meet the design specifications as individual lots, while lot 3 on it's own does not, 
 but as part of all 3 lots, it does.
 #
 
@@ -69,7 +69,7 @@ but as part of all 3 lots, it does.
 #### all lots
 #
 All lots
-p-value = 06028   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for all of the lots as a dataset.
+p-value = .06028   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for all of the lots as a dataset.
 #
 t.test(Suspension_Coil$PSI,mu=mean(Suspension_Coil$PSI))
 #
@@ -100,12 +100,19 @@ t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot3"),m
 ![t-test3](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestlot3.PNG)
 #
 ### Summary
-For each individual lot, Lot 1 had a p-value of 1 and Lot 2 had a p-value of 0.60, both statistically similar which means we cannot reject the null hypothesis. For Lot 3, the sample mean is 1496.14 with a p-Value of 0.04, lower than the significance level of 0.05 which indicates that the sample mean and the presumed population mean are not statistically different.
+For each individual lot, Lot 1 had a p-value of 1 and Lot 2 had a p-value of 0.6072, both statistically similar which means we cannot reject the null hypothesis. For Lot 3, the sample mean is 1496.14 with a p-Value of 0.04168, lower than the significance level of 0.05, which indicates that the sample mean and the presumed population mean are not statistically different.
 
 
 ## Study Design: Statistical Study Comparing MechaCar vs. Competition
+In order to compare MechaCar pricing compared to vehicles from other manufacturers, additional metrics could be added to
+test the null hypothesis and the alternative hypothesis.  
+### Data to be collected
+Data would be collected on MechaCar and its comparable models from the last 2 years.  Data about additional features would be be incorporated and tested as metrics.
+### Metrics to be tested
+Selling Price (independent variable), Engine Type: Gasoline, Electric, or Hybrid (independent variable), Average Maintenance Cost of Ownership (independent variable), Average Insurance Cost, MPG, Creature comforts ratings (iPod, cup holders, GPS)
+### Hypotheses: Null and Alternative
+Null Hypothesis: MechaCar is priced correctly based on its performance across multiple metrics compared to similar cars 
+Alternative Hypothesis: MechCar is not priced correctly based on its performance across multiple metrics compared to similar cars
+### Statistical Test to be used
+Multiple linear regression tests would be used to find the variables with the highest correlation with the selling price, and which combination of variables has the best impact on price.
 
-* What metric or metrics are you going to test?
-* What is the null hypothesis or alternative hypothesis?
-* What statistical test would you use to test the hypothesis? And why?
-* What data is needed to run the statistical test?
