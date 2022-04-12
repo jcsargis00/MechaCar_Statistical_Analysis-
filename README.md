@@ -109,7 +109,7 @@ t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot3"),m
 For each individual lot, Lot 1 had a p-value of 1 and Lot 2 had a p-value of 0.6072, both statistically similar which means we cannot reject the null hypothesis. For Lot 3, the sample mean is 1496.14 with a p-Value of 0.04168, lower than the significance level of 0.05, which indicates that the sample mean and the presumed population mean are not statistically different, and the lot could be underperforming.  Lot 3 should not be used without further study.  Vehicle weight, spoiler angle and AWD features impacted MGP the most, and would need to be included in further research when introducing new features to improve MPG.
 
 ## Study Design: Statistical Study Comparing MechaCar vs. Competition
-Based on the tests described, car weight, spoiler angle and AWD features impact the MPG for the MechaCar.  THe next step
+Based on the tests described, car weight, spoiler angle and AWD features impact the MPG for the MechaCar.  The next step
 is to consider other variables that could improve the MPG and would be seen as pluses to consumers.
 In order to compare MechaCar pricing compared to vehicles from other manufacturers, additional metrics could be added to
 test the null hypothesis and the alternative hypothesis.  
