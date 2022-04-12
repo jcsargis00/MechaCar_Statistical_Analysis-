@@ -8,7 +8,7 @@
 ![MechaCar](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/summarymecha.PNG)
 #
 The absolute minimum is -19.4701, the absolute maximum is 18.5849, showing fairly close tails for a normal distribution.  
-The mean is -0.0692, very close to 0.  The p-values
+The median is -0.0692, very close to 0.  The p-values
 ### Summary
 #
 * Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
