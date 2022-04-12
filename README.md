@@ -8,19 +8,17 @@ Linear regression using the lm() function with all six variables, followed by th
 #
 ![MechaCar](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/summarymecha.PNG)
 #
-The absolute minimum is -19.4701, the absolute maximum is 18.5849, showing fairly close tails for a normal distribution.  
-The median is -0.0692, very close to 0.  The p-values
 ### Summary
 #
 * Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-A 95% level of confidence was predetermined, meaning the p-value should be compared to alpha = .05 level of significance to verify if statistically significant.
+A 95% level of confidence was predetermined, meaning the p-value should be compared to alpha = .05 level of significance to verify if statistically significant.  The absolute minimum is -19.4701, the absolute maximum is 18.5849, showing fairly close tails for a normal distribution.  The median is -0.0692, very close to 0.  
 #
 Coefficients:
 * mpg: 0 < .05, statistically significant, non-random amount of variance
 * vehicle length: 0 < .05, statistically significant, non-random amount of variance
 * vehicle weight: .08 > .05 not statistically significant, random amount of variance
 * spoiler angle: .31 > .05 not statistically significant, random amount of variance
-* ground clearance: 0 > .05 statistically significant, non-random amount of variance
+* ground clearance: 3.546 > .05 statistically significant, non-random amount of variance
 * AWD: .19>=.05 not statistically significant, random amount of variance
 #
 Significant: vehicle length, and ground clearance represent non-random amounts of variance with respect to the mpg values
@@ -39,10 +37,12 @@ Slopes:
 * Does this linear model predict mpg of MechaCar prototypes effectively? 
 R-squared is 0.7149, adjusted R-squared is 0.6825.  This linear model has a strong correlation with the dataset
 and should predict mpg of MechaCar prototypes effectively, provided there are not other variables outside of the
-dataset contributing to the variaton of the mpg.
+dataset contributing to the variaton of the mpg.  The R-squared variable indicates about 71% of all mpg predictions
+will be effectively determined with this linear model.
 #
 ## Summary Statistics on Suspension Coils
 #
+The Suspension_Coil.csv file is comprised of datasets of testing weight capacities of various suspension coils from 3 production lots to determine overall consistency.
 #### Import the Suspension_Coil.csv file and read into a dataframe
 #
 ![Suspension](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/suspension.PNG)
