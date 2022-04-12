@@ -51,27 +51,28 @@ The Suspension_Coil.csv file is comprised of datasets of testing weight capaciti
 #
 #### Total Summary
 #
-Summary statistics of all of the manufacturing lots are shown in the table below. The mean is 1498.78 and the mean is 1500 for this sample.
+Summary statistics of all of the manufacturing lots are shown in the table below. The mean is 1498.78 and the median is 1500 for this sample.
 ![total summary](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/totalsummary.PNG)
 #
 #### Lot Summary
 #
 Statistics for each of the 3 lots are shown below.  The mean and median are close to 1500 for each lot.
+#
 ![lot summary](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/lotsummary.PNG)
 #
 * The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? 
+#
 The variance for all of the lots is 62.29356, which is < 100.  However, the variance for lot 3 is 170.2861224, which is >100.
 Lots 1 (variance 0.9795918) and 2 (variance 7.4693878) meet the design specifications as individual lots, while lot 3 on it's own does not, 
 but as part of all 3 lots, it does.
 #
 
-## T-Tests on Suspension Coils
-### interpretation and findings for the t-test results
+### T-Tests on Suspension Coils: Interpretation and findings for the t-test results
 #### t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI
 #### all lots
 #
 All lots
-p-value = .06028   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for all of the lots as a dataset.
+p-value = 1   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for all of the lots as a dataset.
 #
 t.test(Suspension_Coil$PSI,mu=mean(Suspension_Coil$PSI))
 #
@@ -114,6 +115,7 @@ Data would be collected on MechaCar and its comparable models from the last 2 ye
 Selling Price (independent variable), Engine Type: Gasoline, Electric, or Hybrid (independent variable), Average Maintenance Cost of Ownership (independent variable), Average Insurance Cost, MPG, Creature comforts ratings (iPod, cup holders, GPS)
 ### Hypotheses: Null and Alternative
 Null Hypothesis: MechaCar is priced correctly based on its performance across multiple metrics compared to similar cars 
+#
 Alternative Hypothesis: MechCar is not priced correctly based on its performance across multiple metrics compared to similar cars
 ### Statistical Test to be used
 Multiple linear regression tests would be used to find the variables with the highest correlation with the selling price, and which combination of variables has the best impact on price.
