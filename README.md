@@ -15,12 +15,12 @@ The mean is -0.0692, very close to 0.  The p-values
 A 95% level of confidence was predetermined, meaning the p-value should be compared to alpha = .05 level of significance to verify if statistically significant.
 #
 Coefficients:
-mpg: 0 < .05, statistically significant, non-random amount of variance
-vehicle length: 0 < .05, statistically significant, non-random amount of variance
-vehicle weight: .08 > .05 not statistically significant, random amount of variance
-spoiler angle: .31 > .05 not statistically significant, random amount of variance
-ground clearance: 0 > .05 statistically significant, non-random amount of variance
-AWD: .19>=.05 not statistically significant, random amount of variance
+* mpg: 0 < .05, statistically significant, non-random amount of variance
+* vehicle length: 0 < .05, statistically significant, non-random amount of variance
+* vehicle weight: .08 > .05 not statistically significant, random amount of variance
+* spoiler angle: .31 > .05 not statistically significant, random amount of variance
+* ground clearance: 0 > .05 statistically significant, non-random amount of variance
+* AWD: .19>=.05 not statistically significant, random amount of variance
 #
 Significant: vehicle length, and ground clearance represent non-random amounts of variance with respect to the mpg values
 #
@@ -28,11 +28,11 @@ Significant: vehicle length, and ground clearance represent non-random amounts o
 #
 The slope is non-zero for all variables, although vehicle weight and spoiler angle are close to zero.
 Slopes:
-vehicle length 6.267
-vehicle weight .001
-spoiler angle .069
-ground clearance 3.546
-AWD -3.411
+* vehicle length 6.267
+* vehicle weight .001
+* spoiler angle .069
+* ground clearance 3.546
+* AWD -3.411
 
 
 * Does this linear model predict mpg of MechaCar prototypes effectively? 
