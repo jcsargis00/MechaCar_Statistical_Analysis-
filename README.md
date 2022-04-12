@@ -3,7 +3,8 @@
 #### Import the MechaCar_mpg.csv file and read into a dataframe
 #
 ![dataframe](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/importdataframe.PNG)
-
+#
+Linear regression using the lm() function with all six variables, followed by the summary() function to determine the p-value and the r-squared value for the linear regression model.
 #
 ![MechaCar](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/summarymecha.PNG)
 #
