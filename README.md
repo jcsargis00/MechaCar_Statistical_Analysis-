@@ -10,7 +10,8 @@ Linear regression using the lm() function with all six variables, followed by th
 #
 ### Summary
 #
-* Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+#
 A 95% level of confidence was predetermined, meaning the p-value should be compared to alpha = .05 level of significance to verify if statistically significant.  The absolute minimum is -19.4701, the absolute maximum is 18.5849, showing fairly close tails for a normal distribution.  The median is -0.0692, very close to 0.  
 #
 Coefficients:
@@ -23,10 +24,11 @@ Coefficients:
 #
 Significant: vehicle length, and ground clearance represent non-random amounts of variance with respect to the mpg values
 #
-* Is the slope of the linear model considered to be zero? 
+Is the slope of the linear model considered to be zero? 
+#
+Slopes:
 #
 The slope is non-zero for all variables, although vehicle weight and spoiler angle are close to zero.
-Slopes:
 * vehicle length 6.267
 * vehicle weight .001
 * spoiler angle .069
@@ -34,13 +36,13 @@ Slopes:
 * AWD -3.411
 
 
-### Does this linear model predict mpg of MechaCar prototypes effectively? 
+#### Does this linear model predict mpg of MechaCar prototypes effectively? 
 R-squared is 0.7149, adjusted R-squared is 0.6825.  This linear model has a strong correlation with the dataset
 and should predict mpg of MechaCar prototypes effectively, provided there are not other variables outside of the
 dataset contributing to the variaton of the mpg.  The R-squared variable indicates about 71% of all mpg predictions
 will be effectively determined with this linear model.
 #
-## Summary Statistics on Suspension Coils
+### Summary Statistics on Suspension Coils
 #
 The Suspension_Coil.csv file is comprised of datasets of testing weight capacities of various suspension coils from 3 production lots to determine overall consistency.
 #### Import the Suspension_Coil.csv file and read into a dataframe
