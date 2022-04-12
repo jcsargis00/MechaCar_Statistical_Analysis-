@@ -68,17 +68,18 @@ but as part of all 3 lots, it does.
 #
 
 ### T-Tests on Suspension Coils: Interpretation and findings for the t-test results
-#### t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI
-#### all lots
+#
+The p-values from a single t-test on PSI values were run to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 PSI
+#### All lots
 #
 All lots
-p-value = 1   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for all of the lots as a dataset.
+p-value = .0628   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for all of the lots as a dataset.
 #
-t.test(Suspension_Coil$PSI,mu=mean(Suspension_Coil$PSI))
+t.test((Suspension_Coil$PSI), mu =1500)
 #
 ![t-testall](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestall.PNG)
 #
-#### lot 1
+#### Lot 1
 #
 Lot 1
 p-value = 1   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for lot 1.
@@ -86,7 +87,7 @@ p-value = 1   Since the p-value >.05 the common significance level, there is not
 t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot1"),mu=mean(Suspension_Coil$PSI))
 #
 ![t-test1](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestlot1.PNG)
-#### lot 2
+#### Lot 2
 #
 p-value = .6072   Since the p-value >.05 the common significance level, there is not enough evidence to reject the null hypothesis for lot 2.
 #
@@ -94,7 +95,7 @@ t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot2"),m
 #
 ![t-test2](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestlot2.PNG)
 #
-#### lot 3
+#### Lot 3
 #
 p-value = .04168   Since the p-value <.05 the common significance level, there is enough evidence to reject the null hypothesis for lot 3.
 #
@@ -103,10 +104,12 @@ t.test(subset(Suspension_Coil$PSI,Suspension_Coil$Manufacturing_Lot == "Lot3"),m
 ![t-test3](https://github.com/jcsargis00/MechaCar_Statistical_Analysis-/blob/main/images/ttestlot3.PNG)
 #
 ### Summary
-For each individual lot, Lot 1 had a p-value of 1 and Lot 2 had a p-value of 0.6072, both statistically similar which means we cannot reject the null hypothesis. For Lot 3, the sample mean is 1496.14 with a p-Value of 0.04168, lower than the significance level of 0.05, which indicates that the sample mean and the presumed population mean are not statistically different.
-
+For each individual lot, Lot 1 had a p-value of 1 and Lot 2 had a p-value of 0.6072, both statistically similar which means we cannot reject the null hypothesis. For Lot 3, the sample mean is 1496.14 with a p-Value of 0.04168, lower than the significance level of 0.05, which indicates that the sample mean and the presumed population mean are not statistically different, and the lot could be underperforming.  Lot 3 should not be used without further study.  Car weight, spoiler angle and AWD features impacted MGP the most, and would need to be included in further research when introducing new features to
+improve MPG.
 
 ## Study Design: Statistical Study Comparing MechaCar vs. Competition
+Based on the tests described, car weight, spoiler angle and AWD features impact the MPG for the MechaCar.  THe next step
+is to consider other variables that could improve the MPG and would be seen as pluses to consumers.
 In order to compare MechaCar pricing compared to vehicles from other manufacturers, additional metrics could be added to
 test the null hypothesis and the alternative hypothesis.  
 ### Data to be collected
@@ -118,5 +121,5 @@ Null Hypothesis: MechaCar is priced correctly based on its performance across mu
 #
 Alternative Hypothesis: MechCar is not priced correctly based on its performance across multiple metrics compared to similar cars
 ### Statistical Test to be used
-Multiple linear regression tests would be used to find the variables with the highest correlation with the selling price, and which combination of variables has the best impact on price.
+Multiple linear regression tests could be used to find the variables with the highest correlation with the selling price, and which combination of variables has the best impact on price.  ANOVA could be used to find variability within the regression model.
 
